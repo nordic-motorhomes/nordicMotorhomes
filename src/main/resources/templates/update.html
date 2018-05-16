@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Title</title>
+</head>
+<body>
+
+<div class="container">
+    <h1>Update</h1>
+    <form  action = "/update" method="Post" >
+        <input type="hidden" th:field="${motorhome.motorhomeId}"/>
+        <p>Model: <input type="text" th:field="${motorhome.model}"/></p>
+        <p>Status: <input type="text" th:field="${motorhome.status}"/></p>
+        <p>Sleeping Places: <input type="text" th:field="${motorhome.sleepingPlaces}"/></p>
+        <p>Length: <input type="text" th:field="${motorhome.length}"/></p>
+        <p>Width: <input type="text" th:field="${motorhome.width}"/></p>
+        <p>Height: <input type="text" th:field="${motorhome.height}"/></p>
+        <p>Engine: <input type="text" th:field="${motorhome.engine}"/></p>
+        <p>Permissible Weight: <input type="text" th:field="${motorhome.permissibleWeight}"/></p>
+
+        <input type="submit" value="Update" class="btn btn-update"/>
+    </form>
+</div>
+
+
+</body>
+</html>

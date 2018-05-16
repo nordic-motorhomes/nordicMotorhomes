@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Nordic motorhomes</title>
+    <link rel="stylesheet" href="styleList.css">
+</head>
+
+<body>
+
+<nav>
+    <div class="container">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">News</a>
+        <a href="#">Contact</a>
+        <a href="#">Log out</a>
+    </div>
+</nav>
+
+<div class="flex-container">
+
+
+    <div class="container">
+
+        <a href="/create"> Create </a>
+
+        <table>
+            <tr>
+                <th>Number of seats: 2</th>
+            </tr>
+            <tr>
+                <th></th>
+                <th></th>
+                <th>Current status</th>
+            </tr>
+            <tr th:each="motorhome : ${motorhomes}" th:if="${motorhome.sleepingPlaces==2}">
+                <td><img src="https://cdn.dribbble.com/users/99313/screenshots/2343446/car-2_1x.jpg"
+                         alt="Smiley face"
+                         width="100" height="80"></td>
+                <td><a th:href="@{'details?id='+ ${motorhome.motorhomeId}}" class="btn btn-primary">Details</a>
+                    <a th:href="@{'update?id='+ ${motorhome.motorhomeId}}" class="btn btn-primary">Update</a>
+                    <a th:href="@{'cancel?id='+ ${motorhome.motorhomeId}}" class="btn btn-primary">Cancel</a>
+                    <a th:href="@{'rent?id='+ ${motorhome.motorhomeId}}" class="btn btn-primary">Rent</a>
+                    <a th:href="@{'delete?id='+ ${motorhome.motorhomeId}}" class="btn btn-primary">Delete</a></td>
+
+
+                <td th:text="${motorhome.status}"></td>
+            </tr>
+        </table>
+
+    </div>
+
+    <div class="container">
+        <br>
+        <table>
+            <tr>
+                <th>Number of seats: 3</th>
+            </tr>
+            <tr>
+                <th></th>
+                <th></th>
+                <th>Current status</th>
+            </tr>
+            <tr th:each="motorhome: ${motorhomes}" th:if="${motorhome.sleepingPlaces==3}">
+                <td><img src="https://cdn.dribbble.com/users/99313/screenshots/2343446/car-2_1x.jpg"
+                         alt="Smiley face"
+                         width="100" height="80"></td>
+                <td><a th:href="@{'details?id='+ ${motorhome.motorhomeId}}" class="btn btn-primary">Details</a>
+                    <a th:href="@{'update?id='+ ${motorhome.motorhomeId}}" class="btn btn-primary">Update</a>
+                    <a th:href="@{'cancel?id='+ ${motorhome.motorhomeId}}" class="btn btn-primary">Cancel</a>
+                    <a th:href="@{'rent?id='+ ${motorhome.motorhomeId}}" class="btn btn-primary">Rent</a>
+                <a th:href="@{'delete?id='+ ${motorhome.motorhomeId}}" class="btn btn-primary">Delete</a></td>
+                <td th:text="${motorhome.status}"></td>
+            </tr>
+        </table>
+
+    </div>
+
+    <div class="container">
+        <br>
+        <table>
+            <tr>
+                <th>Number of seats: 4+</th>
+            </tr>
+            <tr>
+                <th></th>
+                <th></th>
+                <th>Current status</th>
+            </tr>
+            <tr th:each="motorhome: ${motorhomes}" th:if="${motorhome.sleepingPlaces>=4}">
+                <td><img src="https://cdn.dribbble.com/users/99313/screenshots/2343446/car-2_1x.jpg"
+                         alt="Smiley face"
+                         width="100" height="80"></td>
+                <td><a th:href="@{'details?id='+ ${motorhome.motorhomeId}}" class="btn btn-primary">Details</a>
+                    <a th:href="@{'update?id='+ ${motorhome.motorhomeId}}" class="btn btn-primary">Update</a>
+                    <a th:href="@{'cancel?id='+ ${motorhome.motorhomeId}}" class="btn btn-primary">Cancel</a>
+                    <a th:href="@{'rent?id='+ ${motorhome.motorhomeId}}" class="btn btn-primary">Rent</a>
+                    <a th:href="@{'delete?id='+ ${motorhome.motorhomeId}}" class="btn btn-primary">Delete</a></td>
+                <td th:text="${motorhome.status}"></td>
+            </tr>
+        </table>
+
+    </div>
+</div>
+</body>
+
+</html>

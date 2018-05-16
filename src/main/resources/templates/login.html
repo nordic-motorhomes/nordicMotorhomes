@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+
+    <title>Sign in</title>
+    <link rel="stylesheet" href="styleList.css">
+</head>
+
+<body>
+
+<video autoplay muted loop id="myVideo">
+    <source src="motorhome.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+</video>
+
+<div class="login-box">
+
+    <p class="sign" align="center">Login</p>
+
+    <form th:action="@{/login}" method="Post">
+        <label for="uname"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="uname" required>
+
+        <label for="pass"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="pass" required>
+
+        <button class="btn btn-primary" type="submit">Login</button>
+    </form>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1> Details</h1>
+
+<div class="tehnical">
+
+    <h2>Tehnical Details</h2>
+    <p th:text="'Id: ' + ${motorhome.motorhomeId}"></p>
+    <p th:text="'Model: ' + ${motorhome.model}"></p>
+    <p th:text="'Status: ' + ${motorhome.status}"></p>
+    <p th:text="'Sleeping Places: ' + ${motorhome.sleepingPlaces}"></p>
+    <p th:text="'Length: ' + ${motorhome.length}"></p>
+    <p th:text="'Width: ' + ${motorhome.width}"></p>
+    <p th:text="'Height: ' + ${motorhome.height}"></p>
+    <p th:text="'Engine: ' + ${motorhome.engine}"></p>
+    <p th:text="'Permissible Weight: ' + ${motorhome.permissibleWeight}"></p>
+</div>
+
+<div class="prices">
+    <h2>Prices</h2>
+    <p th:text="Peak Season Price:" +'' + ${price.peakSeasonPrice}
+
+</div>
+
+
+
+
+
+
+</body>
+</html>
